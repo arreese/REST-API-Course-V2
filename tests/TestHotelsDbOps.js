@@ -1,12 +1,6 @@
-/**
- * Simple tests for all DB operations
- * 
- * Adds the test data to the Database = vacation Collection = vacations
- */
-
-
-// Setup the DB_URI
-process.env.DB_URI = require("../db/clouddb").DB_URI
+process.env.DB_URI = "mongodb://ds059316.mlab.com:59316/acmetravel"
+process.env.DB_USER = "admin"
+process.env.DB_PASSWORD = "admin123"
 
 //Test#1  Insert the Vacation data
 var db = require('../db/hotels')
