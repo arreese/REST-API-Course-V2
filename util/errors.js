@@ -32,13 +32,13 @@ exports.errors = {
         hints:["Please check that user has provided the non null value for description"],
         info:"http://developer.acme.com/error#RequiredFields"
     }  ,
-    MISSING_PACKAGE_NUM_OF_NIGHTS :
-        {
-            code:7003,
-            text:"Required field vacation 'number of nights' is missing",
-            hints:["Please check that user has provided a number (between 1 & 31)"],
-            info:"http://developer.acme.com/error#RequiredFields"
-        },
+    MISSING_PACKAGE_NUM_OF_NIGHTS : 
+    {
+        code:7003,
+        text:"Required field vacation 'number of nights' is missing",
+        hints:["Please check that user has provided a number (between 1 & 31)"],
+        info:"http://developer.acme.com/error#RequiredFields"
+    },
     // All format errors begin with 8
     FORMAT_NUM_OF_NIGHTS : {
         code:7004,
@@ -54,7 +54,7 @@ exports.errors = {
  */
 exports.create = function(message,httpMethod,endpointInformation,errorList,receivedPayload){
     return    {
-        // Meant for the developer
+        // Meant for the developer 
         text:message,
         timestamp:new Date(),
         // POST, GET ....
@@ -76,3 +76,4 @@ exports.kinds = {
     MIN_ERROR:"min",
     MAX_ERROR:"max",
 }
+
