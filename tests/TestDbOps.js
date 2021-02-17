@@ -1,13 +1,18 @@
 /**
  * Simple tests for all DB operations
- * 
+ *
  * Adds the test data to the Database = vacation Collection = vacations
  */
 
 
+// The ../db/setting.js uses the environment variable DB_URI
+// Copy the connect string for the mongoDB cluster & paste below
+// Format =>  mongodb+srv://admin:<password>@cluster0-46e5h.mongodb.net/test?retryWrites=true&w=majority
+const DB_USER = "admin"
+const DB_PASSWORD = "admin123"
+const DB_NAME = "acmetravel"
 
-// Setup the DB_URI
-process.env.DB_URI = require("../db/clouddb").DB_URI
+process.env.DB_URI = "mongodb+srv://"+DB_USER+":"+DB_PASSWORD+"@cluster0.4fu0a.mongodb.net/"+DB_NAME+"?retryWrites=true&w=majority"
 
 //Test#1  Insert the Vacation data
 var db = require('../db/vacations')
